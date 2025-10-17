@@ -1,0 +1,128 @@
+* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      text-decoration: none !important;
+      list-style-type: none;
+}
+
+.wemabank-logo {
+      width: 170px;
+}
+
+ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 0;
+}
+
+.header-1 {
+      display: flex;
+      gap: 3.5em;
+      align-items: center;
+      justify-content: space-around;
+      margin: auto;
+      height: 60px;
+      border: 2px solid red;
+}
+
+.menulist ul {
+      display: flex;
+      gap: 2em;
+      align-items: center !important;
+}
+
+.menulist ul li {
+      display: flex;
+      align-items: center;
+}
+
+.header-1 ul li a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #171717;
+}
+
+.login-but {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+}
+
+.login-but .pc-but {
+      color: #fff;
+      padding: 8px 15px;
+      background-color: #981D87;
+      border-radius: 20px;
+      margin-bottom: 0;
+}
+
+.login-but .mobile-but {
+      color: #fff;
+      padding: 8px 15px;
+      background-color: #981D87;
+      border-radius: 20px;
+      margin-bottom: 0;
+      display: none;
+}
+
+.login-but {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+}
+
+.login-but .glass {
+      font-size: 20px;
+      background-color: #eee;
+      padding: 10px 15px;
+      border-radius: 50%;
+      vertical-align: middle;
+      display: inline-block;
+}
+
+.login-but .bars {
+      font-size: 20px;
+      background-color: #eee;
+      padding: 10px 14px;
+      border-radius: 50%;
+      vertical-align: middle;
+      display: inline-block;
+}
+
+/* =========HEADER-1 MEDIA-QUERY======== */
+
+@media (max-width:1317px) {
+      .header-1 {
+            gap: 1em;
+      }
+
+      .menulist ul {
+            gap: 1em;
+      }
+}
+
+@media (max-width:1279px) {
+      .login-but .pc-but {
+            display: none;
+      }
+
+      .login-but .mobile-but {
+            display: block;
+      }
+}
+
+@media (max-width:1025px) {
+      .header-1 {
+            justify-content: space-between;
+            padding: 0px 10px;
+      }
+
+      .menulist {
+            display: none;
+      }
+
+      .login-but .fa-magnifying-glass {
+            display: block;
+      }
+}
