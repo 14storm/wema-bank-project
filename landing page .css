@@ -2,12 +2,11 @@
       padding: 0;
       margin: 0;
       box-sizing: border-box;
-      text-decoration: none !important;
-      list-style-type: none;
 }
 
-.wemabank-logo {
-      width: 170px;
+a {
+      text-decoration: none !important;
+      color: inherit;
 }
 
 ul {
@@ -18,77 +17,71 @@ ul {
 
 .header-1 {
       display: flex;
-      gap: 3.5em;
-      align-items: center;
       justify-content: space-around;
-      margin: auto;
-      height: 60px;
-      border: 2px solid red;
+      align-items: center;
+      padding: 15px 20px;
+}
+
+.wemabank-logo {
+      width: 170px;
 }
 
 .menulist ul {
       display: flex;
-      gap: 2em;
-      align-items: center !important;
+      gap: 1.5em;
 }
 
-.menulist ul li {
-      display: flex;
-      align-items: center;
-}
-
-.header-1 ul li a {
+.menulist ul li a {
+      color: #333;
       font-size: 14px;
-      text-decoration: none;
-      color: #171717;
 }
 
 .login-but {
       display: flex;
       align-items: center;
-      gap: 1em;
-}
-
-.login-but .pc-but {
-      color: #fff;
-      padding: 8px 15px;
-      background-color: #981D87;
-      border-radius: 20px;
-      margin-bottom: 0;
+      gap: 1.5em;
 }
 
 .login-but .mobile-but {
-      color: #fff;
       padding: 8px 15px;
+      border: 2px solid #981D87;
       background-color: #981D87;
       border-radius: 20px;
-      margin-bottom: 0;
+      color: #fff;
+      white-space: nowrap;
       display: none;
 }
 
-.login-but {
+.login-but .pc-but {
+      padding: 8px 15px;
+      border: 2px solid #981D87;
+      background-color: #981D87;
+      border-radius: 20px;
+      color: #fff;
+      white-space: nowrap;
+}
+
+.login-but .pc-but i {
+      margin-right: 5px;
+}
+
+.menu-icon,
+.search-icon {
       display: flex;
       align-items: center;
-      gap: 1em;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background-color: #eee;
+      border-radius: 50%;
+      display: none;
 }
 
-.login-but .glass {
-      font-size: 20px;
-      background-color: #eee;
-      padding: 10px 15px;
-      border-radius: 50%;
-      vertical-align: middle;
-      display: inline-block;
+.search-icon i,
+.menu-icon i {
+      font-size: 18px;
 }
 
-.login-but .bars {
-      font-size: 20px;
-      background-color: #eee;
-      padding: 10px 14px;
-      border-radius: 50%;
-      vertical-align: middle;
-      display: inline-block;
-}
 
 /* =========HEADER-1 MEDIA-QUERY======== */
 
@@ -122,7 +115,107 @@ ul {
             display: none;
       }
 
-      .login-but .fa-magnifying-glass {
+      .login-but .search-icon,
+      .menu-icon {
             display: block;
       }
+}
+
+@media (max-width:544px) {
+      .wemabank-logo {
+            width: 150px;
+      }
+
+      .login-but .mobile-but {
+            display: none;
+      }
+}
+
+
+
+
+
+
+/* ===========HEADER======== */
+
+header {
+      width: 100%;
+      height: 60px;
+      background-color: #FAFAFA;
+      border: thin solid #333;
+}
+
+.custom-nav {
+      display: flex;
+      width: 90%;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+}
+
+.menu-list {
+      display: flex;
+      gap: 2em;
+}
+
+/* --- Main Dropdown Item (Title) Styling --- */
+.dropdown-item-main {
+      position: relative;
+}
+
+.dropdown-item-main>a {
+      color: #333;
+      padding-bottom: 10px;
+      display: block;
+      text-decoration: none;
+}
+
+.dropdown-item-main:hover>a {
+      color: purple;
+      border-bottom: 3px solid purple;
+}
+
+.dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 250px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+      /* border-radius: 4px; */
+}
+
+.dropdown-content li a {
+      padding: 8px 15px;
+      display: block;
+      color: #555;
+      white-space: nowrap;
+}
+
+.dropdown-content li a:hover {
+      background-color: #f5f5f5;
+      color: purple;
+}
+
+.dropdown-item-main:hover .dropdown-content {
+      display: block;
+}
+
+.search-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: purple;
+      border-radius: 50%;
+      cursor: pointer;
+}
+
+.search-icon {
+      color: white;
+      font-size: 16px;
 }
