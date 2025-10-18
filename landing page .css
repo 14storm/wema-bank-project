@@ -241,5 +241,65 @@ header {
 
 
 /* ========section-1======== */
+/* Hero section inside the carousel */
+.hero-slide {
+      height: 75vh;
+      background: linear-gradient(90deg, #981D87 50%, #000000a7 100%);
+}
 
+/* Text area (left side) */
+.hero-text {
+      max-width: 40%;
+}
 
+/* Image styling */
+.hero-image {
+      width: 50%;
+}
+
+/* Responsive layout */
+@media (max-width: 992px) {
+      .hero-slide {
+            flex-direction: column;
+            text-align: center;
+            height: auto;
+            padding: 3rem 1rem;
+      }
+
+      .hero-text {
+            max-width: 90%;
+            margin-bottom: 2rem;
+      }
+
+      .hero-image {
+            width: 80%;
+      }
+}
+
+/* For carousel items with d-flex layout */
+@media (max-width: 992px) {
+      .carousel-item>.d-flex {
+            flex-direction: column !important;
+            text-align: center;
+            height: auto !important;
+            padding: 2rem 1rem !important;
+      }
+
+      /* Adjust images */
+      .carousel-item img {
+            width: 80% !important;
+            margin: 1rem auto !important;
+      }
+
+      /* Optional: make text readable and centered */
+      .hero-text {
+            max-width: 90% !important;
+            margin-bottom: 2rem;
+      }
+
+      /* Reduce heading size slightly */
+      .hero-text h1 {
+            font-size: 2rem;
+            line-height: 1.3;
+      }
+}
