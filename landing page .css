@@ -166,6 +166,8 @@ header {
 }
 
 /* --- Main Dropdown Item (Title) Styling --- */
+
+
 .dropdown-item-main {
       position: relative;
 }
@@ -192,7 +194,7 @@ header {
       background-color: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 10px 0;
-      /* border-radius: 4px; */
+      border-radius: 4px;
 }
 
 .dropdown-content li a {
@@ -257,33 +259,13 @@ header {
       width: 50%;
 }
 
-/* Responsive layout */
-@media (max-width: 992px) {
-      .hero-slide {
-            flex-direction: column;
-            text-align: center;
-            height: auto;
-            padding: 3rem 1rem;
-      }
-
-      .hero-text {
-            max-width: 90%;
-            margin-bottom: 2rem;
-      }
-
-      .hero-image {
-            width: 80%;
-      }
-}
 
 /* Slide 5 content wrapper */
 .slide-5-content {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      /* text and image close together */
       gap: 20px;
-      /* control spacing */
       width: 100%;
       padding: 50px 100px;
       box-sizing: border-box;
@@ -338,6 +320,61 @@ header {
       object-fit: contain;
 }
 
+.headlines {
+      width: auto;
+      height: 40px;
+      background-color: #981D87;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+}
+
+.headlines h5 {
+      margin: 0;
+      padding: 0 15px;
+      flex-shrink: 0;
+      color: #fff;
+      font-size: 1em;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: #c835b5;
+}
+
+.scroll-container {
+      flex-grow: 1;
+      gap: 3em;
+      white-space: nowrap;
+      overflow: hidden;
+      height: 100%;
+      line-height: 40px;
+}
+
+.scrolling-content {
+      display: inline-block;
+      color: white;
+      padding-left: 10px;
+      font-family: Arial, sans-serif;
+      animation: marquee-scroll 35s linear infinite;
+}
+
+.headlines:hover .scrolling-content {
+      animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+      0% {
+            transform: translateX(100%);
+      }
+
+      100% {
+            transform: translateX(-150%);
+      }
+}
+
+
+
+
 /* Responsive */
 @media (max-width: 992px) {
       .slide-5-content {
@@ -391,7 +428,6 @@ header {
             margin: 1rem auto !important;
       }
 
-      /* Optional: make text readable and centered */
       .hero-text {
             max-width: 90% !important;
             margin-bottom: 2rem;
