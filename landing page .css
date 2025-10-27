@@ -1,3 +1,4 @@
+/* Reset */
 * {
       padding: 0;
       margin: 0;
@@ -10,44 +11,39 @@ a {
 }
 
 ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin-bottom: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
 }
 
+/* Header Layout */
 .header-1 {
-      display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 15px 20px;
 }
 
 .wemabank-logo {
       width: 170px;
 }
 
-.menulist ul {
-      display: flex;
-      gap: 1.5em;
-}
-
-.menulist ul .items a {
+/* Menu List */
+.menulist .nav-link {
       color: #333;
       font-size: 14px;
-      padding: .5em 0em;
+      font-weight: 500;
+      padding: .5em 0;
+      transition: all 0.3s ease-in-out;
+      margin: 0 0.5em;
 }
 
-ul .items a:hover {
-      color: purple;
-      border-bottom: 3px solid purple;
+/* Hover Effect */
+.menulist .nav-link:hover {
+      color: #981D87 !important;
+      border-bottom: 3px solid #981D87;
 }
 
-.login-but {
-      display: flex;
-      align-items: center;
-      gap: 1.5em;
-}
-
+/* Login Buttons */
+.login-but .pc-but,
 .login-but .mobile-but {
       padding: 8px 15px;
       border: 2px solid #981D87;
@@ -55,92 +51,59 @@ ul .items a:hover {
       border-radius: 20px;
       color: #fff;
       white-space: nowrap;
-      display: none;
+      font-size: 14px;
 }
 
-.login-but .pc-but {
-      padding: 8px 15px;
-      border: 2px solid #981D87;
-      background-color: #981D87;
-      border-radius: 20px;
-      color: #fff;
-      white-space: nowrap;
-}
-
-.login-but .pc-but i {
+.login-but .pc-but i,
+.login-but .mobile-but i {
       margin-right: 5px;
 }
 
-.menu-icon,
-.search-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      /* width: 44px;
-      height: 44px;
-      background-color: #eee;
-      border-radius: 50%; */
+/* Icons */
+.search-icon,
+.menu-icon {
+      font-size: 18px;
+      color: #333;
       display: none;
 }
 
-.search-icon i,
-.menu-icon i {
-      font-size: 18px;
-}
+/* ======= MEDIA QUERIES ======= */
 
-
-/* =========HEADER-1 MEDIA-QUERY======== */
-
+/* Reduce spacing */
 @media (max-width:1317px) {
       .header-1 {
             gap: 1em;
       }
 
-      .menulist ul {
-            gap: 1em;
+      .menulist .nav-link {
+            margin: 0 0.3em;
       }
 }
 
+/* Switch to mobile login */
 @media (max-width:1279px) {
       .login-but .pc-but {
             display: none;
       }
 
       .login-but .mobile-but {
-            display: block;
+            display: inline-block;
       }
 }
 
-@media (max-width:1025px) {
-      .header-1 {
-            justify-content: space-between;
-            padding: 0px 10px;
-      }
-
-      .menulist {
-            display: none;
-      }
-
-      .login-but .search-icon,
-      .menu-icon {
-            display: block;
+/* ✅ When screen ≤ 1024px: hamburger shows, hide login + icons */
+@media (max-width:1024px) {
+      .login-but {
+            display: none !important;
       }
 }
 
+/* Smaller phones */
 @media (max-width:544px) {
       .wemabank-logo {
             width: 150px;
       }
-
-      .login-but .mobile-but {
-            display: none;
-      }
 }
-
-
-
-
-
 
 /* ===========HEADER======== */
 
@@ -430,7 +393,7 @@ header {
 
       .hero-text {
             max-width: 90% !important;
-            margin-bottom: 2rem;
+            margin-botto Fm: 2rem;
       }
 
       /* Reduce heading size slightly */
@@ -438,4 +401,59 @@ header {
             font-size: 2rem;
             line-height: 1.3;
       }
-}
+
+
+
+      /* ============ WEMA CARD SECTION ============ */
+      .wema-card-section {
+            text-align: center;
+      }
+
+      /* Each Card */
+      .wema-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 25px 10px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            height: 100%;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+      }
+
+      .wema-card img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 10px;
+      }
+
+      .wema-card h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+      }
+
+      /* Hover Effect */
+      .wema-card:hover {
+            transform: translateY(-5px);
+            border: 3px solid #981D87;
+            box-shadow: 0 8px 18px rgba(152, 29, 135, 0.2);
+      }
+
+      /* Responsive tweaks */
+      @media (max-width: 992px) {
+            .wema-card h4 {
+                  font-size: 13px;
+            }
+      }
+
+      @media (max-width: 576px) {
+            .wema-card {
+                  padding: 20px 5px;
+            }
+      }
