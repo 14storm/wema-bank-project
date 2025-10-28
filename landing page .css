@@ -2,6 +2,8 @@
 * {
       margin: 0;
       padding: 0;
+      text-decoration: none !important;
+      list-style-type: none !important;
       box-sizing: border-box;
 }
 
@@ -116,7 +118,8 @@ body {
       .login-btn {
             display: none !important;
       }
-      .login3-btn{
+
+      .login3-btn {
             display: block;
       }
 
@@ -128,10 +131,11 @@ body {
 
 
 @media (max-width: 992px) {
-      .logo{
-            width:2em !important;
+      .logo {
+            width: 2em !important;
       }
-      .login3-btn{
+
+      .login3-btn {
             display: none;
       }
 
@@ -179,4 +183,311 @@ body {
 
 .menu-toggle.open .bar:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+
+/* HEADER-TWO-STYLING */
+
+.header-2 {
+      width: 100%;
+      height: 60px;
+      background-color: #FAFAFA;
+      border: thin solid #33333342;
+}
+
+.custom-nav {
+      display: flex;
+      width: 81%;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+}
+
+.menu-list {
+      display: flex;
+      gap: 2em;
+}
+
+/* --- Main Dropdown Item (Title) Styling --- */
+
+
+.dropdown-item-main {
+      position: relative;
+}
+
+.dropdown-item-main>a {
+      color: #333;
+      padding-bottom: 10px;
+      display: block;
+      text-decoration: none;
+}
+
+.dropdown-item-main:hover>a {
+      color: purple;
+      border-bottom: 3px solid purple;
+}
+
+.dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 4;
+      top: 100%;
+      left: 0;
+      min-width: 250px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+      border-radius: 4px;
+}
+
+.dropdown-content li a {
+      padding: 8px 15px;
+      display: block;
+      color: #555;
+      white-space: nowrap;
+}
+
+.dropdown-content li a:hover {
+      background-color: #f5f5f5;
+      color: purple;
+}
+
+.dropdown-item-main:hover .dropdown-content {
+      display: block;
+}
+
+.search-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #7a176b;
+      border-radius: 50%;
+      cursor: pointer;
+}
+
+.search-icon {
+      color: #ffffff;
+      font-size: 20px;
+}
+
+@media (max-width:1025px) {
+      .header-2 {
+            display: none;
+      }
+
+      .custom-nav {
+            display: none;
+      }
+}
+
+
+
+/* ========CAROUSEL======= */
+
+.hero-slide {
+      height: 75vh;
+      background: linear-gradient(90deg, #981D87 50%, #000000a7 100%);
+}
+
+/* Text area (left side) */
+.hero-text {
+      max-width: 40%;
+}
+
+/* Image styling */
+.hero-image {
+      width: 50%;
+}
+
+
+/* Slide 5 content wrapper */
+.slide-5-content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      width: 100%;
+      padding: 50px 100px;
+      box-sizing: border-box;
+      position: relative;
+}
+
+/* Text */
+.slide-5-text {
+      flex: 1;
+      max-width: 600px;
+}
+
+/* Headings and paragraph */
+.slide-5-text h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+}
+
+.slide-5-text p {
+      font-size: 1.15rem;
+      color: #555;
+      margin-bottom: 30px;
+}
+
+/* Button */
+.order-card-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 25px;
+      background-color: #981D87;
+      color: #fff !important;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s;
+}
+
+.order-card-btn:hover {
+      background-color: #7a176b;
+}
+
+.order-card-btn i {
+      margin-left: 10px;
+}
+
+/* Image */
+.slide-5-img {
+      max-width: 50%;
+      height: auto;
+      object-fit: contain;
+}
+
+
+
+
+
+
+.headlines {
+      width: auto;
+      height: 40px;
+      background-color: #981D87;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+}
+
+.headlines h5 {
+      margin: 0;
+      padding: 0 15px;
+      flex-shrink: 0;
+      color: #fff;
+      font-size: 1em;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: #c835b5;
+}
+
+.scroll-container {
+      flex-grow: 1;
+      gap: 3em;
+      white-space: nowrap;
+      overflow: hidden;
+      height: 100%;
+      line-height: 40px;
+}
+
+.scrolling-content {
+      display: inline-block;
+      color: white;
+      padding-left: 10px;
+      font-family: Arial, sans-serif;
+      animation: marquee-scroll 35s linear infinite;
+}
+
+.headlines:hover .scrolling-content {
+      animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+      0% {
+            transform: translateX(100%);
+      }
+
+      100% {
+            transform: translateX(-150%);
+      }
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+      .slide-5-content {
+            flex-direction: column-reverse;
+            text-align: center;
+            /* gap: px; */
+            padding: 30px 20px;
+      }
+
+      .slide-5-text h1 {
+            font-size: 2.2rem;
+      }
+
+      .slide-5-text p {
+            font-size: 1rem;
+      }
+
+      .slide-5-img {
+            width: 100%;
+            max-width: 400px;
+      }
+}
+
+@media (max-width: 576px) {
+      .slide-5-content {
+            padding: 20px 10px;
+            /* gap: 10px; */
+      }
+
+      .slide-5-text h1 {
+            font-size: 1.8rem;
+      }
+
+      .slide-5-text p {
+            font-size: 0.95rem;
+      }
+}
+
+.caro-wrapper {
+      position: relative;
+      z-index: 1;
+}
+
+.cards-wrapper {
+      position: relative;
+      background-color: #fff;
+      z-index: 2;
+}
+
+.cards-wrapper .card {
+      border: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards-wrapper .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cards-wrapper .card img {
+      width: 100%;
+      height: 120px;
+      object-fit: contain;
 }
