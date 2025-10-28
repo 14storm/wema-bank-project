@@ -1,32 +1,182 @@
-*{
-      padding: 0;
+/* ========== GLOBAL RESET ========== */
+* {
       margin: 0;
+      padding: 0;
       box-sizing: border-box;
-      text-decoration: none !important;
-      list-style-type: none;
-
 }
-.header-1{
-      height: 80px;
-      background-color: #ffffff;
+
+body {
+      font-family: "Poppins", sans-serif;
+}
+
+/* ========== NAVBAR BASE ========== */
+.navbar-custom {
       width: 100%;
-      border: 2px solid red;
-      padding: .5em;
-}
-.collapse{
-      gap: 6em;
-}
-.navbar{
-      padding: .5em;
-      border: 2px solid green;
-}
-.navbar-nav{
-      border: 2px solid orange;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
 }
 
-.online-banking-login{
-      padding: .5em 1em;
+.navbar-cus {
+      width: 80%;
+      margin: auto;
+}
+
+.logo img {
+      width: 150px;
+}
+
+/* ========== NAV LINKS ========== */
+.nav-links {
+      list-style: none;
+      gap: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+      color: #981D87;
+      border-bottom: 3px solid #981D87;
+}
+
+/* ========== LOGIN BUTTON ========== */
+.login-btn {
       background-color: #981D87;
-      color: #fff;
-      border-radius: 2em;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+}
+
+.login2-btn {
+      background-color: #981D87;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+      display: none;
+}
+
+.login3-btn {
+      background-color: #981D87;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+      display: none;
+}
+
+.login-btn:hover {
+      background-color: #7a176b;
+}
+
+/* ========== HAMBURGER BUTTON ========== */
+.menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+}
+
+.bar {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+      transition: all 0.3s ease;
+}
+
+/* ========== RESPONSIVE STYLING ========== */
+@media (max-width:1400px) {
+      .navbar-cus {
+            width: 90%;
+      }
+
+      .nav-links {
+            gap: 1em !important;
+      }
+}
+
+@media (max-width:1200px) {
+      .login-btn {
+            display: none !important;
+      }
+      .login3-btn{
+            display: block;
+      }
+
+      .nav-links {
+            gap: .5em;
+      }
+}
+
+
+
+@media (max-width: 992px) {
+      .logo{
+            width:2em !important;
+      }
+      .login3-btn{
+            display: none;
+      }
+
+      /* Show hamburger on mobile */
+      .menu-toggle {
+            display: flex;
+      }
+
+      /* Hide nav by default */
+      .nav-links {
+            position: absolute;
+            top: 75px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5em;
+            padding: 2em 0;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            display: none !important;
+            /* hide by default */
+            transition: all 0.3s ease;
+      }
+
+      /* Show nav when active */
+      .nav-links.active {
+            display: flex !important;
+      }
+
+      /* Hide login button on mobile */
+      .login2-btn {
+            display: block !important;
+      }
+}
+
+/* ========== HAMBURGER ANIMATION ========== */
+.menu-toggle.open .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+      opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
 }
