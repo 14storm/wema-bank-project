@@ -91,9 +91,10 @@ body {
       display: none;
       flex-direction: column;
       gap: 5px;
-      background: none;
+      background: white;
       border: none;
       cursor: pointer;
+
 }
 
 .bar {
@@ -101,6 +102,7 @@ body {
       height: 3px;
       background-color: #333;
       transition: all 0.3s ease;
+
 }
 
 /* ========== RESPONSIVE STYLING ========== */
@@ -152,12 +154,14 @@ body {
             left: 0;
             width: 100%;
             flex-direction: column;
+            justify-content: start;
             align-items: center;
             gap: 1.5em;
             padding: 2em 0;
             background-color: #fff;
             border-top: 1px solid #eee;
             display: none !important;
+            z-index: 6;
             /* hide by default */
             transition: all 0.3s ease;
       }
@@ -176,6 +180,8 @@ body {
 /* ========== HAMBURGER ANIMATION ========== */
 .menu-toggle.open .bar:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
+      background-color: #981D87;
+      color: #981D87;
 }
 
 .menu-toggle.open .bar:nth-child(2) {
@@ -184,6 +190,8 @@ body {
 
 .menu-toggle.open .bar:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
+      background-color: #981D87;
+      color: #981D87;
 }
 
 
@@ -477,8 +485,9 @@ body {
 
 /* Each card is a flex column */
 .cards-wrapper {
-      background-color: #eee;
-      height: 30vh;
+      background-color: #F6F6F6;
+      height: auto;
+      width: 100%;
 }
 
 .cards-wrapper .card {
@@ -506,3 +515,155 @@ body {
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
       transform: translateY(-12px);
 }
+
+
+
+
+
+
+
+/* =============OUR-PRODUCT-SECTION-STYLING=============== */
+.collate {
+      padding-top: 4em;
+      width: 90%;
+      margin: auto;
+      /* text-align: center; */
+}
+
+.sect-3-text {
+      margin-bottom: 3em;
+      padding-left:5em;
+}
+
+.sect-3-text h5 {
+      /* text-transform: uppercase; */
+      color: #b71e75;
+      /* letter-spacing: 1px; */
+      margin-bottom: 0.5em;
+}
+
+.sect-3-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1em;
+}
+
+.comment {
+      font-size: 1em;
+      width: 100%;
+      max-width: 650px;
+      color: #1f1f1fbf;
+      line-height: 1.6;
+}
+
+/* ====== GRID SECTION ====== */
+.skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:2em;
+      width: 95%;
+      margin: auto;
+}
+
+
+.skills-container {
+      background-color: #FDEDFC;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      justify-content: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+      height: 90%;
+}
+.skills-container .card-3 {
+     margin: auto;
+}
+
+.skills-container:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.skills-container img {
+      width: 8em;
+      height: auto;
+      object-fit: contain;
+}
+
+.skills-container h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1em;
+}
+
+.skills-container p {
+      color: #1f1f1fb8;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.2em;
+}
+
+.skills-container a {
+      color: #000;
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+      font-weight: 500;
+      text-decoration: none;
+}
+
+.skills-container a:hover i {
+      transform: translateX(4px);
+      transition: transform 0.3s ease;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 999px) {
+      .skills {
+            grid-template-columns: repeat(2, 1fr);
+      }
+}
+
+@media (max-width: 600px) {
+      .skills {
+            grid-template-columns: 1fr;
+      }
+
+      .collate {
+            width: 95%;
+            padding-top: 2em;
+      }
+
+      .sect-3-text h2 {
+            font-size: 1.6rem;
+      }
+
+      .skills-container {
+            padding: 1.5em;
+      }
+
+      .skills-container img {
+            width: 6em;
+      }
+
+      .skills-container p {
+            font-size: 0.9rem;
+      }
+
+      .skills-container a {
+            font-size: 0.9rem;
+      }
+}
+
+
+
+
+
+  /* ==SECTION-YOUR-STRATEGIC-PARTNER-STYLING===== */
+  .two-fashion-designers{
+      width: 450px;
+  }
+  .small-market{
+      width: 50px;
+  }
