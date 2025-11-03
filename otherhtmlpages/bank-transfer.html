@@ -337,6 +337,18 @@
             <p>Wema Bank Plc, Licensed by the Central Bank of Nigeria</p>
         </div>
     </footer>
-    m
+
 
 </body>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('open');
+        document.body.classList.toggle('menu-open'); // adds overlay dim
+    });
+</script>
+
+</html>
